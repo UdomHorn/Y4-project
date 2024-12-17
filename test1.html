@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    <h1 id="gettime"></h1>
+    <input type="button" value="Show time" id="btn1" onclick="calltime()">
+    <script type="text/javascript">
+        function calltime(){
+        document.getElementById("gettime").innerHTML=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+        }
+    </script>
+    <script type="text/javascript" src="myscript.js"></script>
+</body>
+</html>

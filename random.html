@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function out(m){
+            document.write(m);
+        }
+        function readInt(l){
+            return parseInt(prompt(l,""));
+        }
+        function getRandom(min,max){
+            return min+Math.floor(Math.random()*(max-min+1));
+        }
+        var s;
+        s=getRandom(1,10);
+        out("<h1>"+s+"</h1>");
+    </script>
+</body>
+</html>

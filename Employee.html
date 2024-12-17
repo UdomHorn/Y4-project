@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="employee.css">
+    <title>Employee Form</title>
+</head>
+<body>
+    <h1>Employee Form</h1>
+    <Form name ="f">
+    ID:<input type="text" name="id"><br><br>
+
+    Name: <input type ="text" name="name"><br><br>
+
+    Hour: <input type="text" name="hour"><br><br>
+ 
+    Rate: <select name="rate">
+        <option value="15.0" >15.0</option>
+        <option value="18.0"  >18.0</option>
+        <option value="20.0">20.0</option>
+      </select><br><br>
+
+    Tax:<input type="radio" value="10%" name="tax"><label>10%</label>
+    <input type="radio" value="15%" name="tax"><label>15%</label>
+    <input type="radio" value="20%" name="tax"><label>20%</label><br><br>
+    <input type="button" value="ADD" onclick="Getdata()">
+    <input type="reset" value="Reset"><br><br>
+    <textarea name="table" cols="30" rows="10"></textarea>
+</Form>
+<script type="text/javascript">
+function Getdata(){
+    var id, name, hour, tax ,rate,result;
+    id=(document.f.id.value);
+    name=(document.f.name.value);
+    hour=(document.f.hour.value);
+    rate=(document.f.rate.value);
+    tax=(document.f.tax.value);
+    result = id+" "+name+" "+hour+" "+rate+" "+tax;
+    document.f.table.value = result;
+}
+</script>
+</body>
+</html>

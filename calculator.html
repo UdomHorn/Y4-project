@@ -1,0 +1,56 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="f">
+        Value A <input type="text" name="tfa"><br>
+        Value B <input type="text" name="tfb"><br>
+        <br>
+        <input type="button" value=" + " onclick="mySum()">
+        <input type="button" value=" - " onclick="mySum1()">
+        <input type="button" value=" * " onclick="mySum2()">
+        <input type="button" value=" / " onclick="mySum3()">
+        <br><br>
+        Results <input type="text" name="tfr"><br>
+    </form>
+
+    <script type="text/javascript">
+        function mySum() {
+            var a, b, s;
+            a = parseFloat(document.f.tfa.value);
+            b = parseFloat(document.f.tfb.value);
+            s = a + b;
+            document.f.tfr.value = s;
+        }
+        function mySum1() {
+            var a, b, s;
+            a = parseFloat(document.f.tfa.value);
+            b = parseFloat(document.f.tfb.value);
+            s = a - b;
+            document.f.tfr.value = s;
+        }
+        function mySum2() {
+            var a, b, s;
+            a = parseFloat(document.f.tfa.value);
+            b = parseFloat(document.f.tfb.value);
+            s = a * b;
+            document.f.tfr.value = s;
+        }
+        function mySum3(){
+            var a, b, s;
+            a = parseFloat(document.f.tfa.value);
+            b = parseFloat(document.f.tfb.value);
+            s = a / b;
+            document.f.tfr.value = s;
+        }
+    </script>
+</body>
+
+</html>

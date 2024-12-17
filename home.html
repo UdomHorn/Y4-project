@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    div{
+        width:300px;
+        height: 400px;
+        border: 5px groove red;
+        background-color: yellow;
+        text-align: center;
+        font-size: 35px;
+        font-family: 'Courier New', 'Courier New', Courier, monospace;
+        font-weight: bolder;
+    }
+</style>
+    <body>
+    <script type="text/javascript">
+    var a, b, c, result="<div>", d, x1, x2;
+    a=prompt("Enter A", "3");
+    b=prompt("Enter B","5");
+    c=prompt("Enter C","2");
+    result+=a+"x<sup>2</sup>";
+    result+=(b>0? "+"+b+"x":b+"x" );
+    result+=(c>0? "+"+c:c);
+    result+="=0<br/>";
+    d=(b*b)-(4*a*c);
+    if(d>=0){
+    x1=(-b+Math.sqrt(d)/(2*a));
+    x2=(-b-Math.sqrt(d))/(2*a);
+    result+="<br/>x1="+x1.toFixed(2);
+    result+="<br/>x2="+x2.toFixed(2);
+    }
+    else{
+    result+="<br/><i>No Root</i>";
+    }
+    document.write(result);
+    result+="</div";
+    </script> 
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandomStyle</title>
+    <style type="text/css">
+        .box {
+            width: 30px;
+            height: 30px;
+            border: 2px groove green;
+            background-color: aqua;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function drawBox(n) {
+            return "<div class=box>"+n+"</div>";
+        }
+        function out(m){
+            document.write(m);
+        }
+        function readInt(l){
+            return parseInt(prompt(l,""));
+        }
+        function getRandom(min,max){
+            return min+Math.floor(Math.random()*(max-min+1));
+        }
+        function drawTable(r, c, min, max) {
+            var t = "", v;
+            for (var i = 1; i <= r; i++) {
+                for (var j = 1; i <= c; j++) {
+                    v = getRandom(min, max);
+                    t += drawBox(v);
+                }
+                t += "<div class=br></div>";
+            }
+            return t;
+        }
+        var s, row, col, min, max;
+        min=readInt("Enter Min Value");
+        max=readInt("Enter max Value");
+        row=readInt("Enter row");
+        col=readInt("Enter col");
+        s=drawTable(row, col, min, max);
+        out(s);
+    </script>
+</body>
+
+</html>

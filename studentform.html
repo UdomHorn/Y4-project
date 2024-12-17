@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studentform</title>
+</head>
+<body>
+  <div>
+    <h1>
+      Student Form
+    </h1>
+  </div>
+    <form name="f">
+        ID: 
+        <input type="text" name="id" /><br>
+        <br>   
+        Name:
+         <input type="text" name="name" /><br>
+        <br>
+        Gender:
+        <input type="radio" name="gender" value="Male"/>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="Female"/>
+        <label for="female">Female</label>
+        <br>
+        <br>
+        <input type="button" name="sub" onclick="getData()" value="Create"/><br>
+        <br>
+        <textarea name="table" cols="30" rows="10"></textarea>
+    </form>
+    <script>
+
+        function getData(){
+            var id, name, gender, result;
+            id = (document.f.id.value);
+            name = (document.f.name.value);
+            gender = (document.f.gender.value);
+            result = id+" " +name+" "+gender;
+            document.f.table.value = result;
+        }
+    </script>
+</body>
+</html>

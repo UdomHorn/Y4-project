@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="IMAGES/img1.jpg" id="mypic" 
+    onmouseover="myOver()" 
+    onmouseout="myOut()"/>
+    <script type="text/javascript">
+        function myOut(){
+            document.getElementById("mypic").src="IMAGES/img1.jpg"
+        }
+        function myOver(){
+            document.getElementById("mypic").src="IMAGES/img2.jpg"
+        }
+    </script>
+</body>
+</html>

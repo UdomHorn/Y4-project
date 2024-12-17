@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script type="text/javascript">
+        function out(m){
+            document.write(m);
+        }
+        function readInt(l){
+            return parseInt(prompt(l,""));
+        }
+        function drawLine(n){
+            var s=n+":";
+            for (var i=1;i<=n;i++)
+            s+="*";
+        return s;
+        }
+        function drawAll(n){
+            var res="";
+            for(var i=1;i<=n;i++)
+            res+=drawLine(i)+"<br/>";
+        return res;
+        }
+        var n, result;
+        n=readInt("Enter Number");
+        result=drawAll(n);
+        out("<h1>"+result+"</h1>")
+    </script>
+</body>
+</html>

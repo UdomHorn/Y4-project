@@ -1,0 +1,15 @@
+*{
+    margin:5;
+    padding:5;
+    position:relative;
+
+}
+h1{
+    color:rebeccapurple;
+}
+form{
+    color:blue;
+}
+textarea{
+    color: red;
+}
